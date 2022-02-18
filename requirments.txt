@@ -1,1 +1,7 @@
-Add installed version with packages !
+Sql
+
+mysql
+flask_mysqldb
+mysql.connector
+flask_sqlalchemy
+flask 
