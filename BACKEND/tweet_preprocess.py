@@ -1,4 +1,3 @@
-
 def tokenize input
 
 	# Different regex parts for smiley faces
