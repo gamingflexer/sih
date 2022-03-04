@@ -5,10 +5,10 @@ c = twint.Config()
 
 #for k in ky:
 c.Search = "flood"
-c.Limit = 300
+c.Limit= 300
 c.Min_likes = 1
-#c.Custom["tweet"] = ["i", "username","tweet",'date','time','language',"name","mentions", "urls", "photos", "replies_count", "retweets_count", "likes_count", "hashtags","cashtags",'link','']
-c.Output = "D:\\Workspaces\\PythonWorkspace\\SmartIndiaHackathon\\BACKEND\\WebScrapping\\xyx.csv"
+#c.Custom["tweet"] = ["id", "username","tweet",'date','time','language',"name","mentions", "urls", "photos", "replies_count", "retweets_count", "likes_count", "hashtags","cashtags",'link','']
+c.Output="/Users/cosmos/Desktop/SIH - MAIN/sih/BACKEND/WebScrapping/x.json"
 c.Store_json=True
 #c.Store_object = True
 c.Hide_output = True
