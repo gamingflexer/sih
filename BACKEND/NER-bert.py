@@ -2,12 +2,12 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, pipelin
 import torch
 import pyperclip
 import re
-#pho_num = []
 
 text = ""
 
 tokenizer = AutoTokenizer.from_pretrained("dslim/bert-large-NER")
 model = AutoModelForTokenClassification.from_pretrained("dslim/bert-large-NER")
+
 
 def ner(text):
     # create a pipleine to get the output
@@ -33,9 +33,9 @@ def ner(text):
 
     final_loc_list = []
     for name_list in all_names_list_tmp:
-        full_name = ' '.join(name_list[0]).replace(' ##', '').replace(' .', '.')
+        full_name = ' '.join(name_list[0]).replace(
+            ' ##', '').replace(' .', '.')
         final_loc_list.append([full_name])
-
 
     # Person Name
     this_name = []
@@ -56,19 +56,17 @@ def ner(text):
 
     final_name_list = []
     for name_list in all_names_list_tmp:
-        full_name = ' '.join(name_list[0]).replace(' ##', '').replace(' .', '.')
+        full_name = ' '.join(name_list[0]).replace(
+            ' ##', '').replace(' .', '.')
         final_name_list.append([full_name])
-
 
     # numbers removal if any important
     imp_num = []
     for z in text.split():
         if z.isdigit():
             imp_num.append(int(z))
-            
-    return final_name_list,final_loc_list
 
-
+    return final_name_list, final_loc_list
 
 
 def get_phone_numbers(string):
